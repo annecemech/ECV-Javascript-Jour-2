@@ -1,0 +1,21 @@
+.btn {
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  border-radius: 0.375rem;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-dark-blue {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+.btn-dark-blue:hover {
+  background-color: var(--dark-blue-hover);
+  color: var(--white);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}

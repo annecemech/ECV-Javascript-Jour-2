@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction au Javascript</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="my-3">
+        <h1 class="text-center">Javascript Jour 2 - Les événements</h1>
+        <p></p>
+      </section>
+      <h2>1. Interagir avec un bouton</h2>
+      <section class="my-3 border-bottom">
+        <p>
+          Au clic sur le bouton, changer le contenu du texte "cliquez ici" par
+          "Bravo!"
+        </p>
+        <div class="card-tip">
+          <p>
+            Utilisez document.getElementById pour venir sélectionner le bouton
+            et stocker la dans une variable (const).
+          </p>
+          <p>
+            Poser un écouteur sur le bouton (addEventListner) et au clic, venez
+            modifier le contenu du bouton (innerText).
+          </p>
+          <p class="mt-1">
+            <strong>Bonus :</strong> Une fois cette première étape réalisée,
+            vous pouvez ajouter une condition pour que : si le texte du bouton
+            est "Cliquez-ici", alors remplacez le par "Bravo!", sinon, remplacez
+            le par "Cliquez-ici".
+          </p>
+        </div>
+        <div id="main-button" class="btn btn-dark-blue mt-3">Cliquez-ici</div>
+      </section>
+      <h2>2. Rendre une FAQ dynamique</h2>
+      <section class="my-3 border-bottom">
+        <p>
+          Voici une FAQ qui doit être sous forme d'accordéon. Lorsque l'on
+          clique sur un élément, tous les autres doivent se replier et seul
+          celui sur lequel on a cliqué doit être visible.
+        </p>
+        <div class="card-tip mb-3">
+          <p>
+            Sélectionner tous les éléments qui portent la classe .accordion-item
+            avec document.querySelectorAll et stocker les dans une variable
+            (const).
+          </p>
+          <p>
+            Itérez sur chacun des éléments (forEach) et pour chacun de ces
+            élément, posez un écouteur (addEventListener). Au clic, ajoutez ou
+            retirer la class .active (classList.toggle).
+          </p>
+          <p>
+            Attention pour sélectionner l'élément .accordion-item qui a été
+            cliqué, faut utiliser "event.currentTarget" ou "event.target" ?
+          </p>
+        </div>
+        <div class="accordion">
+          <div class="accordion-item active">
+            <div class="accordion-item-header">
+              <h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+                alias.
+              </h4>
+            </div>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Facilis iure culpa laborum perferendis placeat eveniet
+                  molestiae rem aspernatur, sed neque beatae, deserunt
+                  consequatur maiores doloremque accusamus, itaque laudantium
+                  voluptas eaque. Accusantium voluptas recusandae dolorum vitae,
+                  cumque asperiores vero, quibusdam maxime sequi et esse non.
+                  Accusantium quos optio eveniet! Iste facere similique tempora
+                  temporibus quos non, omnis quidem aspernatur neque laboriosam.
+                  Distinctio obcaecati quos rem cum iure, impedit suscipit animi
+                  ea qui hic inventore perferendis molestias reprehenderit,
+                  doloribus nulla laborum velit incidunt similique non. Et,
+                  animi quasi expedita quis incidunt eius. Officia, inventore!
+                  Sint laboriosam quasi sapiente ea facere eum, culpa
+                  necessitatibus consequuntur sit labore quidem architecto eos,
+                  harum, consectetur sequi. Quidem quasi perspiciatis nesciunt
+                  vel a quod est reiciendis? Magni.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-header">
+              <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
+            </div>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                  inventore perspiciatis dolores similique veniam nisi autem
+                  nesciunt dignissimos voluptate mollitia. Sed quaerat adipisci
+                  eos quo recusandae impedit atque illum maiores. Sint totam
+                  voluptate minima animi explicabo cum officiis, rem deserunt?
+                  Culpa quis natus iste corporis doloribus perspiciatis illo ex
+                  fugiat vero non fugit repellendus ullam, quam delectus
+                  explicabo! Omnis, at. Reprehenderit voluptatum eligendi,
+                  beatae soluta quibusdam nulla assumenda deserunt voluptatibus
+                  saepe ipsum corporis optio eaque magnam neque rerum ratione
+                  dolor distinctio explicabo! Odit, voluptate. Voluptatem amet
+                  quaerat tempora temporibus at!
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Voluptate quo eum vitae cumque rerum perspiciatis temporibus,
+                  odio voluptatum eveniet vero rem numquam, enim ipsam molestiae
+                  dolorum itaque. Quidem, amet officiis. Mollitia numquam
+                  voluptas inventore, aspernatur aut obcaecati alias sapiente!
+                  Esse hic vero quidem quod repellendus. Consequatur impedit
+                  quidem natus dolores distinctio. Officia sapiente cumque quis
+                  ad voluptatum laboriosam exercitationem illum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-header">
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            </div>
+            <div class="accordion-item-body">
+              <div class="accordion-item-body-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam reiciendis porro explicabo quos dicta esse. Ut saepe
+                  eum maiores magnam iusto, ipsum dolore, dignissimos asperiores
+                  distinctio quibusdam minus vero obcaecati. Corrupti, ipsam,
+                  ducimus ipsa quo at molestias nisi ab maxime atque harum,
+                  molestiae ea voluptatem! Reiciendis velit amet minima,
+                  accusamus quam sit vero, at possimus esse totam blanditiis
+                  harum laudantium? Atque nemo, odit commodi facilis eveniet
+                  necessitatibus similique, debitis labore eaque minus optio
+                  rerum dolor inventore libero, eius excepturi numquam molestias
+                  amet perspiciatis! Illo, reiciendis a? Maxime, in! Temporibus,
+                  odit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h2>2. Changer une image au clic</h2>
+      <section class="my-3 border-bottom">
+        <p>
+          En javascript, remplacez toutes les images ci-dessous par celle de
+          votre choix.
+        </p>
+        <div class="card-tip">
+          <p>
+            Utilisez document.querySelectorAll pour venir sélectionner toutes
+            les images et stocker les dans une variable (const).
+          </p>
+          <p>
+            Itérez sur chanque image (forEach) et venez modifier l'url de
+            l'image actuelle par celle de votre choix (src).
+          </p>
+        </div>
+        <div class="grid my-3">
+          <img
+            src="https://images.unsplash.com/photo-1655574283119-232a804c4ff6?q=80&w=1931&auto=format"
+            alt="cours de l'intendance"
+            class="img-pointer"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1639409393516-7d43f23c7abb?q=80&w=2039&auto=format"
+            alt="rive droite"
+            class="img-pointer"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1655574282152-f39e3a5925f3?q=80&w=1931&auto=format"
+            alt="grand théatre"
+            class="img-pointer"
+          />
+        </div>
+      </section>
+      <h2>2. Faire des suggestions de recherche</h2>
+      <section class="my-3 border-bottom">
+        <p>
+          Le but de l'exercice est de détecter ce que l’utilisateur tape dans
+          l’input, pour lui afficher une suggestion de villes correspondantes
+          dans une liste
+          <code>&lt;ul&gt;</code> qui porte l'id
+          <code>#results</code>
+          (inspectez le code pour la trouver). La liste doit être mise à jour en
+          fonction de la recherche, et ne doit pas accumuler les résultats
+          indéfiniment.
+        </p>
+        <p>
+          La liste des villes se trouve déjà dans le fichier
+          <code>script.js</code> dans une constante <code>cities</code>.
+        </p>
+        <div class="card-tip mb-3">
+          <p>
+            Sélectionnez l’élément <code>&lt;input&gt;</code> avec
+            <a
+              href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById"
+              target="_blank"
+            >
+              document.getElementById
+            </a>
+            et stockez-le dans une variable (const).
+          </p>
+          <p>
+            Posez un écouteur sur l’input avec
+            <a
+              href="https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener"
+              target="_blank"
+            >
+              addEventListener
+            </a>
+            sur l’événement "keyup" pour détecter chaque saisie.
+          </p>
+          <p>
+            Récupérez la valeur de l’input avec
+            <a
+              href="https://developer.mozilla.org/fr/docs/Web/API/HTMLInputElement/value"
+              target="_blank"
+            >
+              .value
+            </a>
+            et utilisez
+            <a
+              href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+              target="_blank"
+            >
+              filter()
+            </a>
+            pour chercher dans le tableau <code>cities</code> les villes qui
+            incluent ce texte.
+          </p>
+          <p>
+            Affichez les résultats dans la liste <code>&lt;ul&gt;</code> en
+            créant dynamiquement des <code>&lt;li&gt;</code>. Pensez à utiliser
+            <a
+              href="https://developer.mozilla.org/fr/docs/Web/API/Element/insertAdjacentHTML"
+              target="_blank"
+            >
+              insertAdjacentHTML
+            </a>
+            pour mettre à jour la liste.
+          </p>
+          <p>
+            Pour insérer dynamiquement le contenu dans le HTML, utilisez
+            l’interpolation de chaînes de caractères avec les template literals
+            :
+            <br />
+            Exemple :
+            <code>`&lt;li&gt;${nomDeLaVille}&lt;/li&gt;`</code>.
+            <br />
+            Consultez la documentation sur les
+            <a
+              href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Template_literals"
+              target="_blank"
+            >
+              template literals
+            </a>
+            pour en savoir plus.
+          </p>
+          <p class="mt-1">
+            <strong>Bonus 1 :</strong> Avant d’ajouter de nouveaux résultats,
+            videz la liste pour éviter l’accumulation des éléments. <br />Astuce
+            : Assurez-vous que la liste est bien mise à jour en réassignant
+            <code>innerHTML = ""</code> avant d’insérer les nouvelles
+            suggestions.
+          </p>
+          <p class="mt-1">
+            <strong>Bonus 2 :</strong> Rendez la recherche insensible à la
+            casse. <br />Pensez à convertir à la fois la valeur de l’input et
+            les villes de <code>cities</code> en minuscules avec
+            <a
+              href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase"
+              target="_blank"
+            >
+              toLowerCase()
+            </a>
+            avant d’effectuer la comparaison dans <code>filter()</code>.
+          </p>
+        </div>
+
+        <div class="my-3">
+          <div class="max-w-md mx-auto">
+            <div
+              class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden"
+            >
+              <div
+                class="grid place-items-center h-full w-12 text-gray-500 ml-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+
+              <input
+                class="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+                type="text"
+                id="search"
+                placeholder="Où voulez vous aller?.."
+              />
+            </div>
+          </div>
+          <ul id="results" class="text-center my-3">
+            TO DO : Insérer les suggestions de recherche ici.
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

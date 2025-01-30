@@ -1,0 +1,7 @@
+.card-tip {
+  font-style: italic;
+  opacity: 0.7;
+  border-left: 2px var(--pink) solid;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
