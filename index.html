@@ -19,22 +19,6 @@
           Au clic sur le bouton, changer le contenu du texte "cliquez ici" par
           "Bravo!"
         </p>
-        <div class="card-tip">
-          <p>
-            Utilisez document.getElementById pour venir sélectionner le bouton
-            et stocker la dans une variable (const).
-          </p>
-          <p>
-            Poser un écouteur sur le bouton (addEventListner) et au clic, venez
-            modifier le contenu du bouton (innerText).
-          </p>
-          <p class="mt-1">
-            <strong>Bonus :</strong> Une fois cette première étape réalisée,
-            vous pouvez ajouter une condition pour que : si le texte du bouton
-            est "Cliquez-ici", alors remplacez le par "Bravo!", sinon, remplacez
-            le par "Cliquez-ici".
-          </p>
-        </div>
         <div id="main-button" class="btn btn-dark-blue mt-3">Cliquez-ici</div>
       </section>
       <h2>2. Rendre une FAQ dynamique</h2>
@@ -44,22 +28,6 @@
           clique sur un élément, tous les autres doivent se replier et seul
           celui sur lequel on a cliqué doit être visible.
         </p>
-        <div class="card-tip mb-3">
-          <p>
-            Sélectionner tous les éléments qui portent la classe .accordion-item
-            avec document.querySelectorAll et stocker les dans une variable
-            (const).
-          </p>
-          <p>
-            Itérez sur chacun des éléments (forEach) et pour chacun de ces
-            élément, posez un écouteur (addEventListener). Au clic, ajoutez ou
-            retirer la class .active (classList.toggle).
-          </p>
-          <p>
-            Attention pour sélectionner l'élément .accordion-item qui a été
-            cliqué, faut utiliser "event.currentTarget" ou "event.target" ?
-          </p>
-        </div>
         <div class="accordion">
           <div class="accordion-item active">
             <div class="accordion-item-header">
@@ -155,16 +123,6 @@
           En javascript, remplacez toutes les images ci-dessous par celle de
           votre choix.
         </p>
-        <div class="card-tip">
-          <p>
-            Utilisez document.querySelectorAll pour venir sélectionner toutes
-            les images et stocker les dans une variable (const).
-          </p>
-          <p>
-            Itérez sur chanque image (forEach) et venez modifier l'url de
-            l'image actuelle par celle de votre choix (src).
-          </p>
-        </div>
         <div class="grid my-3">
           <img
             src="https://images.unsplash.com/photo-1655574283119-232a804c4ff6?q=80&w=1931&auto=format"
@@ -200,72 +158,6 @@
           <code>script.js</code> dans une constante <code>cities</code>.
         </p>
         <div class="card-tip mb-3">
-          <p>
-            Sélectionnez l’élément <code>&lt;input&gt;</code> avec
-            <a
-              href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById"
-              target="_blank"
-            >
-              document.getElementById
-            </a>
-            et stockez-le dans une variable (const).
-          </p>
-          <p>
-            Posez un écouteur sur l’input avec
-            <a
-              href="https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener"
-              target="_blank"
-            >
-              addEventListener
-            </a>
-            sur l’événement "keyup" pour détecter chaque saisie.
-          </p>
-          <p>
-            Récupérez la valeur de l’input avec
-            <a
-              href="https://developer.mozilla.org/fr/docs/Web/API/HTMLInputElement/value"
-              target="_blank"
-            >
-              .value
-            </a>
-            et utilisez
-            <a
-              href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
-              target="_blank"
-            >
-              filter()
-            </a>
-            pour chercher dans le tableau <code>cities</code> les villes qui
-            incluent ce texte.
-          </p>
-          <p>
-            Affichez les résultats dans la liste <code>&lt;ul&gt;</code> en
-            créant dynamiquement des <code>&lt;li&gt;</code>. Pensez à utiliser
-            <a
-              href="https://developer.mozilla.org/fr/docs/Web/API/Element/insertAdjacentHTML"
-              target="_blank"
-            >
-              insertAdjacentHTML
-            </a>
-            pour mettre à jour la liste.
-          </p>
-          <p>
-            Pour insérer dynamiquement le contenu dans le HTML, utilisez
-            l’interpolation de chaînes de caractères avec les template literals
-            :
-            <br />
-            Exemple :
-            <code>`&lt;li&gt;${nomDeLaVille}&lt;/li&gt;`</code>.
-            <br />
-            Consultez la documentation sur les
-            <a
-              href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Template_literals"
-              target="_blank"
-            >
-              template literals
-            </a>
-            pour en savoir plus.
-          </p>
           <p class="mt-1">
             <strong>Bonus 1 :</strong> Avant d’ajouter de nouveaux résultats,
             videz la liste pour éviter l’accumulation des éléments. <br />Astuce
