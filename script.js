@@ -12,11 +12,11 @@ button.addEventListener("click", (event) => {
 
 // Rendre une FAQ cliquable
 
-const accordionItems = document.querySelectorAll(".accordion-item");
+const accordionItems = document.querySelectorAll(".accordion-item-header");
 
 accordionItems.forEach((item) => {
   item.addEventListener("click", (event) => {
-    event.currentTarget.classList.toggle("active");
+    event.currentTarget.parentElement.classList.toggle("active");
   });
 });
 
